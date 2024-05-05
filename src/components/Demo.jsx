@@ -68,11 +68,6 @@ const Demo = () => {
           className="relative flex justify-center items-center"
           onSubmit={handleSubmit}
         >
-          {/* <img
-            src={linkIcon}
-            alt='link-icon'
-            className='absolute left-0 my-2 ml-3 w-5'
-          /> */}
           <span className="absolute left-0 my-2 ml-3 w-5">
             <IoLinkSharp />
           </span>
@@ -88,10 +83,10 @@ const Demo = () => {
           />
           <button
             type="submit"
-            className="submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700 "
+            class="submit_btn peer-focus:border-gray-900 peer-focus:text-gray-700 flex items-center justify-center   text-white font-bold py-2 px-4 rounded"
           >
             <p>
-              <FaLocationArrow />
+              <FaLocationArrow className="text-xl" />
             </p>
           </button>
         </form>
