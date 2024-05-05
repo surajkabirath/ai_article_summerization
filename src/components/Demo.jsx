@@ -83,7 +83,7 @@ const Demo = () => {
           />
           <button
             type="submit"
-            class="submit_btn peer-focus:border-gray-900 peer-focus:text-gray-700 flex items-center justify-center   text-white font-bold py-2 px-4 rounded"
+            className="submit_btn peer-focus:border-gray-900 peer-focus:text-gray-700 flex items-center justify-center   text-white font-bold py-2 px-4 rounded"
           >
             <p>
               <FaLocationArrow className="text-xl" />
@@ -104,7 +104,8 @@ const Demo = () => {
                   {copied === item.url ? <TiTick /> : <IoCopy />}
                 </span>
               </div>
-              <p className="flex-1 font-satoshi text-blue-700 font-medium text-sm truncate">
+              <p className="flex-1 font-satoshi
+               text-blue-700 font-medium text-sm truncate">
                 {item.url}
               </p>
             </div>
