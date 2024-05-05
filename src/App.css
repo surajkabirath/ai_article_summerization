@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .main {
   width: 100vw;
   min-height: 100vh;
@@ -20,7 +23,7 @@
 
 .main:after {
   content: "";
-  background-image: url("/src/assets/grid.svg");
+  background-color: rgb(249, 246, 246);
   z-index: 1;
   position: absolute;
   width: 100%;

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-
-import { copy, linkIcon, loader, tick } from "../assets";
 import { useLazyGetSummaryQuery } from "../services/article";
-
+import { FaLocationArrow } from "react-icons/fa";
+import { IoLinkSharp } from "react-icons/io5";
+import { IoCopy } from "react-icons/io5";
+import { TiTick } from "react-icons/ti";
 const Demo = () => {
   const [article, setArticle] = useState({
     url: "",
@@ -67,11 +68,12 @@ const Demo = () => {
           className='relative flex justify-center items-center'
           onSubmit={handleSubmit}
         >
-          <img
+          {/* <img
             src={linkIcon}
             alt='link-icon'
             className='absolute left-0 my-2 ml-3 w-5'
-          />
+          /> */}
+          <span className='absolute left-0 my-2 ml-3 w-5'><IoLinkSharp/></span>
 
           <input
             type='url'
@@ -86,7 +88,7 @@ const Demo = () => {
             type='submit'
             className='submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700 '
           >
-            <p>↵</p>
+            <p><FaLocationArrow/></p>
           </button>
         </form>
 
@@ -99,11 +101,13 @@ const Demo = () => {
               className='link_card'
             >
               <div className='copy_btn' onClick={() => handleCopy(item.url)}>
-                <img
+                {/* <img
                   src={copied === item.url ? tick : copy}
                   alt={copied === item.url ? "tick_icon" : "copy_icon"}
                   className='w-[40%] h-[40%] object-contain'
-                />
+                /> */}
+                <span className='w-[40%] h-[40%] object-contain'>
+                  {copied === item.url ? <TiTick/> : <IoCopy/>}</span>
               </div>
               <p className='flex-1 font-satoshi text-blue-700 font-medium text-sm truncate'>
                 {item.url}
@@ -116,7 +120,8 @@ const Demo = () => {
       {/* Display Result */}
       <div className='my-10 max-w-full flex justify-center items-center'>
         {isFetching ? (
-          <img src={loader} alt='loader' className='w-20 h-20 object-contain' />
+          // <img src={loader} alt='loader' className='w-20 h-20 object-contain' />
+          <span className='w-20 h-20 object-contain'>loading...</span>
         ) : error ? (
           <p className='font-inter font-bold text-black text-center'>
             Well, that wasn't supposed to happen...
