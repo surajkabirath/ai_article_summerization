@@ -157,6 +157,7 @@ import { FaLocationArrow } from "react-icons/fa";
 import { IoLinkSharp } from "react-icons/io5";
 import { IoCopy } from "react-icons/io5";
 import { TiTick } from "react-icons/ti";
+import Loader from "./Loader";
 
 const Demo = () => {
   const [article, setArticle] = useState({
@@ -281,7 +282,7 @@ const Demo = () => {
 
       <div className="my-10 max-w-full flex justify-center items-center">
         {isFetching ? (
-          <span className="w-20 h-20 object-contain">loading...</span>
+          <Loader/>
         ) : error ? (
           <p className="font-inter font-bold text-black text-center">
             Well, that wasn't supposed to happen...
