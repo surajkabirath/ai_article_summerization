@@ -2,8 +2,9 @@ const Hero = () => {
   return (
     <header className="w-full flex justify-center items-center flex-col">
       <nav className="flex justify-between items-center w-full mb-10 pt-3">
-        {/* <img src={logo} alt='sum logo' className='w-28 object-contain'/> */}
-        <span className="text-orange-500 font-bold text-xl"><span className="blue_gradient">Article</span>Sumz</span>
+        <span className="text-orange-500 font-bold text-xl">
+          <span className="blue_gradient">Article</span>Sumz
+        </span>
 
         <button
           type="button"
